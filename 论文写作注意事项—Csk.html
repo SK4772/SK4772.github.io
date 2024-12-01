@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="论文写作注意事项—Csk文章撰写所需软件：latex安装；Winedt: Latex代码编辑器 JabRef:  参考文献管理 MATLAB: 代码（实验，绘图） 绘图：PPT，MATLAB，Python 文献阅读管理：Zotero, 知云等 文献网站：谷歌学术，百度学术，Scidown(文献下载)，AMiner，Sci-hub（文献下载），SPIS，科研通 代码查找：Github, Paperw">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E2%80%94Csk.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="论文写作注意事项—Csk文章撰写所需软件：latex安装；Winedt: Latex代码编辑器 JabRef:  参考文献管理 MATLAB: 代码（实验，绘图） 绘图：PPT，MATLAB，Python 文献阅读管理：Zotero, 知云等 文献网站：谷歌学术，百度学术，Scidown(文献下载)，AMiner，Sci-hub（文献下载），SPIS，科研通 代码查找：Github, Paperw">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-10-25T01:06:54.940Z">
+<meta property="article:modified_time" content="2024-10-25T01:06:54.940Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E2%80%94Csk">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | Hexo
+</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <h1 id="论文写作注意事项—Csk"><a href="#论文写作注意事项—Csk" class="headerlink" title="论文写作注意事项—Csk"></a>论文写作注意事项—Csk</h1><h4 id="文章撰写所需软件："><a href="#文章撰写所需软件：" class="headerlink" title="文章撰写所需软件："></a>文章撰写所需软件：</h4><p>latex安装；Winedt: Latex代码编辑器</p>
+<p>JabRef:  参考文献管理</p>
+<p>MATLAB: 代码（实验，绘图）</p>
+<p>绘图：PPT，MATLAB，Python</p>
+<p>文献阅读管理：Zotero, 知云等</p>
+<p>文献网站：谷歌学术，百度学术，<a target="_blank" rel="noopener" href="https://www.scidown.cn/">Scidown</a>(文献下载)，<a href="aminer.cn">AMiner</a>，<a href="sci-hub.se">Sci-hub</a>（文献下载），<a target="_blank" rel="noopener" href="http://spis.hnlat.com/">SPIS</a>，<a target="_blank" rel="noopener" href="https://www.ablesci.com/">科研通</a></p>
+<p>代码查找：Github, <a target="_blank" rel="noopener" href="https://paperswithcode.com/">Paperwithcode</a></p>
+<p>大模型：ChatGPT，kimi</p>
+<h4 id="行文规范"><a href="#行文规范" class="headerlink" title="行文规范"></a>行文规范</h4><h5 id="1-缩写"><a href="#1-缩写" class="headerlink" title="1.缩写"></a>1.缩写</h5><p>文章中需要多次出现时，第一次使用全称，后文使用缩写；</p>
+<p>摘要中尽量避免出现缩写，影响读者阅读；</p>
+<p>摘要中的缩写与文章中的缩写相互独立，举例：BLS在摘要中出现过，正文中第一次使用时仍需使用全称，随后在再使用缩写；</p>
+<h5 id="2-标点符号"><a href="#2-标点符号" class="headerlink" title="2.标点符号"></a>2.标点符号</h5><p>标点前不空格，标点后空格</p>
+<p><strong>易犯错：当一句话未结束时使用逗号（特指公式）</strong></p>
+<p>当公式中出现新的变量，符号时进行需解释说明</p>
+<p><strong>文章前后的标量字符要统一</strong>，如X，Y的维度要与相对应变量的维度统一</p>
+<h5 id="3-段落"><a href="#3-段落" class="headerlink" title="3.段落"></a>3.段落</h5><p>尽量避免多次分段且每段篇幅短，影响观感</p>
+<h5 id="4-句子"><a href="#4-句子" class="headerlink" title="4.句子"></a>4.句子</h5><p>避免出现错别字，单复数形式，时态错误等语法错误，<strong>可以使用GPT,word（检查错别字）等</strong></p>
+<p>句子中的数字不能单纯打出来，以latex代码形式出现</p>
+<h5 id="5-参考文献"><a href="#5-参考文献" class="headerlink" title="5.参考文献"></a>5.参考文献</h5><p>参考文献中近三年的文章引用至少三分之一左右；</p>
+<p>引用一些所投期刊的文章</p>
+<h5 id="6-文献降重"><a href="#6-文献降重" class="headerlink" title="6.文献降重"></a>6.文献降重</h5><p>GPT降重指令及已有<a target="_blank" rel="noopener" href="https://chatgpt.com/share/671a42e5-0cc8-8005-af71-c77efd5e7900">对话链接</a>：我将给你两段文字，你给出他们之间的重复部分，并对段1文本中的句子结构进行改写调整，通过采用不同的句型和语法结构，避免出现连续四个字与段2相同的情况，以增强文本的多样性和学术性。</p>
+
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E2%80%94Csk"><span class="nav-number">1.</span> <span class="nav-text">论文写作注意事项—Csk</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E6%92%B0%E5%86%99%E6%89%80%E9%9C%80%E8%BD%AF%E4%BB%B6%EF%BC%9A"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">文章撰写所需软件：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%8C%E6%96%87%E8%A7%84%E8%8C%83"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">行文规范</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E7%BC%A9%E5%86%99"><span class="nav-number">1.0.0.2.1.</span> <span class="nav-text">1.缩写</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"><span class="nav-number">1.0.0.2.2.</span> <span class="nav-text">2.标点符号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E6%AE%B5%E8%90%BD"><span class="nav-number">1.0.0.2.3.</span> <span class="nav-text">3.段落</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E5%8F%A5%E5%AD%90"><span class="nav-number">1.0.0.2.4.</span> <span class="nav-text">4.句子</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">1.0.0.2.5.</span> <span class="nav-text">5.参考文献</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-%E6%96%87%E7%8C%AE%E9%99%8D%E9%87%8D"><span class="nav-number">1.0.0.2.6.</span> <span class="nav-text">6.文献降重</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <!---->
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
