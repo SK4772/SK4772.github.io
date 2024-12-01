@@ -19,7 +19,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>jQuery对表单的操作及更多应用</title>
+    <title>论文写作注意事项—Csk</title>
     <url>/2017/05/26/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E2%80%94Csk/</url>
     <content><![CDATA[<h1 id="论文写作注意事项—Csk"><a href="#论文写作注意事项—Csk" class="headerlink" title="论文写作注意事项—Csk"></a>论文写作注意事项—Csk</h1><h4 id="文章撰写所需软件："><a href="#文章撰写所需软件：" class="headerlink" title="文章撰写所需软件："></a>文章撰写所需软件：</h4><p>latex安装；Winedt: Latex代码编辑器</p>
 <p>JabRef:  参考文献管理</p>
@@ -44,7 +44,7 @@
 <h5 id="6-文献降重"><a href="#6-文献降重" class="headerlink" title="6.文献降重"></a>6.文献降重</h5><p>GPT降重指令及已有<a href="https://chatgpt.com/share/671a42e5-0cc8-8005-af71-c77efd5e7900">对话链接</a>：我将给你两段文字，你给出他们之间的重复部分，并对段1文本中的句子结构进行改写调整，通过采用不同的句型和语法结构，避免出现连续四个字与段2相同的情况，以增强文本的多样性和学术性。</p>
 ]]></content>
       <categories>
-        <category>web前端</category>
+        <category>论文写作</category>
       </categories>
   </entry>
 </search>
