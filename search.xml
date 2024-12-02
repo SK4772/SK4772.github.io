@@ -33,7 +33,7 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>迁移学习综述</title>
     <url>/2024/12/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E7%BB%BC%E8%BF%B0/</url>
     <content><![CDATA[<h1 id="迁移学习">迁移学习</h1>
 <h3 id="前置知识">前置知识：</h3>
@@ -357,41 +357,51 @@ class="math display">\[
 这个式子就是将同类样本取均值做MMD，其中关键之处是使用<strong>伪标签</strong>作为目标域的标签，因为原本的目标域是无标签的。</p>
 <p>​
 其次，使用<strong>标签拖拽</strong>增加判别能力，并构造源域内部图以及两域之间图即，他们的权重定义如下：
-$$ (W^S_w)_{ij} =</p>
-<span class="math display">\[\begin{cases}
+$$</p>
+<span class="math display">\[\begin{aligned}
+{(W^S_w)}_{ij} =
+\begin{cases}
 1, &amp; \text{if } i \neq j, y_{S_i} = y_{S_j} \\
 0, &amp; \text{otherwise}
-\end{cases}\]</span>
-<p>\</p>
-<p>(W^T_w)_{ij} =</p>
-<span class="math display">\[\begin{cases}
+\end{cases}
+\\
+
+{(W^T_w)}_{ij} =
+\begin{cases}
 1, &amp; \text{if } i \neq j, \hat{y}_{T_i} = \hat{y}_{T_j} \\
 0, &amp; \text{otherwise}
-\end{cases}\]</span>
+\end{cases}
+\end{aligned}\]</span>
 <p><span class="math display">\[
 这里源域使用真实标签，目标域使用伪标签进行图的构造
-\]</span> (W^{ST}<em>w)</em>{ij} =</p>
-<span class="math display">\[\begin{cases}
+\]</span></p>
+<span class="math display">\[\begin{aligned}
+(W^{ST}_w)_{ij} =
+\begin{cases}
 1, &amp; \text{if } x_j \in N^c_k(x_i) \text{ or } x_i \in N^c_k(x_j) \\
 0, &amp; \text{otherwise}
-\end{cases}\]</span>
-<p>\ (W^{TS}<em>w)</em>{ji} =</p>
-<span class="math display">\[\begin{cases}
+\end{cases}
+\\
+(W^{TS}_w)_{ji} =
+\begin{cases}
 1, &amp; \text{if } x_i \in N^c_k(x_j) \text{ or } x_j \in N^c_k(x_i) \\
 0, &amp; \text{otherwise}
-\end{cases}\]</span>
+\end{cases}
+\end{aligned}\]</span>
 <p><span class="math display">\[
 这里通过判断最近邻设置图，构造最终的两个权重矩阵$W_w$和$W_b$
-\]</span> W_w =</p>
-<span class="math display">\[\begin{bmatrix}
+\]</span></p>
+<span class="math display">\[\begin{aligned}
+W_w &amp;= \begin{bmatrix}
 W^S &amp; W^{ST} \\
 W^{TS} &amp; W^T
-\end{bmatrix}\]</span>
-<p>\ W_b =</p>
-<span class="math display">\[\begin{bmatrix}
+\end{bmatrix}
+\\
+W_b &amp;= \begin{bmatrix}
 W^S &amp; 0 \\
 0 &amp; W^T
-\end{bmatrix}\]</span>
+\end{bmatrix}
+\end{aligned}\]</span>
 <p><span class="math display">\[
 通过此构造拉普拉斯矩阵$L_w = D_w - W_w, \quad L_b = D_b -
 W_b$，并以此构造流形正则项：
@@ -675,5 +685,12 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 </tbody>
 </table>
 ]]></content>
+      <categories>
+        <category>Transfer Learning</category>
+      </categories>
+      <tags>
+        <tag>调研</tag>
+        <tag>写作</tag>
+      </tags>
   </entry>
 </search>
