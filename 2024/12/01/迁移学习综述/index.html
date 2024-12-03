@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta name="referrer" content="no-referrer" /><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>迁移学习综述 | SK乌拉乌拉</title><meta name="keywords" content="调研,写作"><meta name="author" content="SK乌拉乌拉"><meta name="copyright" content="SK乌拉乌拉"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="迁移学习综述"><meta name="application-name" content="迁移学习综述"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="迁移学习综述"><meta property="og:url" content="http://example.com/2024/12/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E7%BB%BC%E8%BF%B0/index.html"><meta property="og:site_name" content="SK乌拉乌拉"><meta property="og:description" content="迁移学习前置知识：1.边缘概率分布和条件概率分布​	在迁移学习中，边缘概率分布和条件概率分布是两个重要的概念。边缘概率分布（Marginal Probability Distribution），即P(X)，在迁移学习中是指的是数据的特征分布。P(x)不同是说数据的产生机制不一样，比如不同角度、光照或"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://example.com/img/sk.jpg"><meta property="article:author" content="SK乌拉乌拉"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="http://example.com/img/sk.jpg"><meta name="description" content="迁移学习前置知识：1.边缘概率分布和条件概率分布​	在迁移学习中，边缘概率分布和条件概率分布是两个重要的概念。边缘概率分布（Marginal Probability Distribution），即P(X)，在迁移学习中是指的是数据的特征分布。P(x)不同是说数据的产生机制不一样，比如不同角度、光照或"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://example.com/2024/12/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E7%BB%BC%E8%BF%B0/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>迁移学习综述 | SK乌拉乌拉</title><meta name="keywords" content="调研,写作"><meta name="author" content="SK乌拉乌拉"><meta name="copyright" content="SK乌拉乌拉"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="迁移学习综述"><meta name="application-name" content="迁移学习综述"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="迁移学习综述"><meta property="og:url" content="http://example.com/2024/12/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E7%BB%BC%E8%BF%B0/index.html"><meta property="og:site_name" content="SK乌拉乌拉"><meta property="og:description" content="迁移学习前置知识：1.边缘概率分布和条件概率分布​    在迁移学习中，边缘概率分布和条件概率分布是两个重要的概念。边缘概率分布（Marginal Probability Distribution），即P(X)，在迁移学习中是指的是数据的特征分布。P(x)不同是说数据的产生机制不一样，比如不同角"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://example.com/img/sk.jpg"><meta property="article:author" content="SK乌拉乌拉"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="http://example.com/img/sk.jpg"><meta name="description" content="迁移学习前置知识：1.边缘概率分布和条件概率分布​    在迁移学习中，边缘概率分布和条件概率分布是两个重要的概念。边缘概率分布（Marginal Probability Distribution），即P(X)，在迁移学习中是指的是数据的特征分布。P(x)不同是说数据的产生机制不一样，比如不同角"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://example.com/2024/12/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E7%BB%BC%E8%BF%B0/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   linkPageTop: undefined,
   peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
   postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
@@ -60,7 +60,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-12-03 09:36:40',
+  postUpdate: '2024-12-03 09:44:00',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -203,12 +203,14 @@ setTimeout(function(){preloader.endLoading();},10000)
 if (true) {
   document.addEventListener('pjax:send', () => { preloader.initLoading() })
   document.addEventListener('pjax:complete', () => { preloader.endLoading() })
-}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">SK乌拉乌拉</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-box-archive"></use></svg><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-shapes"></use></svg><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-tags"></use></svg><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 1.05rem;">入门<sup>1</sup></a><a href="/tags/%E5%86%99%E4%BD%9C/" style="font-size: 1.05rem;">写作<sup>1</sup></a><a href="/tags/%E8%B0%83%E7%A0%94/" style="font-size: 1.05rem;">调研<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/05/"><span class="card-archive-list-date">五月 2017</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/Transfer-Learning/" itemprop="url">Transfer Learning</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E8%B0%83%E7%A0%94/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>调研</span></a><a class="article-meta__tags" href="/tags/%E5%86%99%E4%BD%9C/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>写作</span></a></span></div></div><h1 class="post-title" itemprop="name headline">迁移学习综述</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-12-01T14:29:23.919Z" title="发表于 2024-12-01 22:29:23">2024-12-01</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-12-03T01:36:40.204Z" title="更新于 2024-12-03 09:36:40">2024-12-03</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为长沙"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>长沙</span></div></div></div><article class="post-content" id="article-container" itemscope itemtype="http://example.com/2024/12/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E7%BB%BC%E8%BF%B0/"><header><a class="post-meta-categories" href="/categories/Transfer-Learning/" itemprop="url">Transfer Learning</a><a href="/tags/%E8%B0%83%E7%A0%94/" tabindex="-1" itemprop="url">调研</a><a href="/tags/%E5%86%99%E4%BD%9C/" tabindex="-1" itemprop="url">写作</a><h1 id="CrawlerTitle" itemprop="name headline">迁移学习综述</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">SK乌拉乌拉</span><time itemprop="dateCreated datePublished" datetime="2024-12-01T14:29:23.919Z" title="发表于 2024-12-01 22:29:23">2024-12-01</time><time itemprop="dateCreated datePublished" datetime="2024-12-03T01:36:40.204Z" title="更新于 2024-12-03 09:36:40">2024-12-03</time></header><h1 id="迁移学习"><a href="#迁移学习" class="headerlink" title="迁移学习"></a>迁移学习</h1><h3 id="前置知识："><a href="#前置知识：" class="headerlink" title="前置知识："></a>前置知识：</h3><h4 id="1-边缘概率分布和条件概率分布"><a href="#1-边缘概率分布和条件概率分布" class="headerlink" title="1.边缘概率分布和条件概率分布"></a>1.边缘概率分布和条件概率分布</h4><p>​	在迁移学习中，边缘概率分布和条件概率分布是两个重要的概念。<strong>边缘概率分布</strong>（Marginal Probability Distribution），即P(X)，在迁移学习中是指的是数据的特征分布。P(x)不同是说数据的产生机制不一样，比如不同角度、光照或背景的图像，不同被试者产生的生理数据、行为数据，它们都服从不同的特征分布，即边缘概率分布不一致。在迁移学习中，只要源域和目标域数据服从不同的分布规律，我们就认为二者存在边缘概率分布差异，这种差异被称为分布偏移或领域漂移（domain shift）。<strong>条件概率分布</strong>（Conditional Probability Distribution），即P(y|x)，在迁移学习中是指给定特征的条件下，标签的分布。在理想情况下，源域和目标域的条件概率分布是相同的。然而，在现实中并不总是成立。比如，不同被试者的生理数据通常不一样；而且即使是相同被试者，在不同状态或者时间下，进行相同的动作，生理数据也存在差异。另外，在迁移学习中，理解边缘概率分布和条件概率分布的差异是非常重要的，因为这可以帮助我们选择合适的迁移学习策略。例如，如果源域和目标域在边缘概率分布上有较大差异，但在条件概率分布上差异较小，那么我们可能会选择使用特征选择或者特征转换的方法来进行迁移学习。反之，如果源域和目标域在条件概率分布上有较大差异，那么我们可能需要使用更复杂的迁移学习方法，例如重新标注一些目标域的数据，或者使用对抗性训练等方法来解决这个问题。</p>
-<p>​	我们通常解决的是边缘概率分布以及条件概率分布的不同情况即$P_s(X)\neq P_t(X)$且$P_s(Y|X)\neq P_t(Y|X)$。源域和目标域的数据分布存在差异即$P_s(X,Y)\neq P_t(X,Y)$，通过贝叶斯公式，可以将这个联合概率分解为：$P(X,Y)&#x3D; P(Y|X)P(X)$ 因此可以将源域和目标域数据分布不同转化为边缘概率分布和条件概率分布。</p>
-<h4 id="2-MMD"><a href="#2-MMD" class="headerlink" title="2.MMD"></a>2.MMD</h4><p>​	既然存在着分布上的差异，那么在迁移学习中便要尽可能减少分布之间的差异。其中所必须思考的问题是如何度量这种差异，只有度量出差异后，才能尽可能减少分布上的差异。</p>
-<p>首先，我们考虑如何描述一个随机变量，最直接的方法就是给出它的概率分布函数 f(x) 。一些简单的分布可以这么干，比如正态分布给出均值和方差就可以确定，但是对于一些<strong>复杂的、高维的随机变量</strong>，我们无法给出它们的分布函数。这时候我们可以用随机变量的矩来描述一个随机变量，比如一阶中心矩是均值，二阶中心矩是方差等等。如果两个分布的均值和方差都相同的话，它们应该很相似，比如同样均值和方差的高斯分布和拉普拉斯分布。但是很明显，均值和方差并不能完全代表一个分布，这时候我们就需<strong>要更高阶的矩</strong>来描述一个分布[<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/163839117#ref_1">1]</a>。举个例子，就好比描述人一样，如果两个人身高、轮廓都一样，我们会说这两个人很像。但是如果要说这两个人是一个人的话，我们如要更多的信息，比如血型、DNA等更加复杂的信息。</p>
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">SK乌拉乌拉</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-box-archive"></use></svg><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-shapes"></use></svg><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-tags"></use></svg><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 1.05rem;">入门<sup>1</sup></a><a href="/tags/%E5%86%99%E4%BD%9C/" style="font-size: 1.05rem;">写作<sup>1</sup></a><a href="/tags/%E8%B0%83%E7%A0%94/" style="font-size: 1.05rem;">调研<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/05/"><span class="card-archive-list-date">五月 2017</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/Transfer-Learning/" itemprop="url">Transfer Learning</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E8%B0%83%E7%A0%94/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>调研</span></a><a class="article-meta__tags" href="/tags/%E5%86%99%E4%BD%9C/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>写作</span></a></span></div></div><h1 class="post-title" itemprop="name headline">迁移学习综述</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-12-01T14:29:23.919Z" title="发表于 2024-12-01 22:29:23">2024-12-01</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-12-03T01:44:00.854Z" title="更新于 2024-12-03 09:44:00">2024-12-03</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为长沙"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>长沙</span></div></div></div><article class="post-content" id="article-container" itemscope itemtype="http://example.com/2024/12/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E7%BB%BC%E8%BF%B0/"><header><a class="post-meta-categories" href="/categories/Transfer-Learning/" itemprop="url">Transfer Learning</a><a href="/tags/%E8%B0%83%E7%A0%94/" tabindex="-1" itemprop="url">调研</a><a href="/tags/%E5%86%99%E4%BD%9C/" tabindex="-1" itemprop="url">写作</a><h1 id="CrawlerTitle" itemprop="name headline">迁移学习综述</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">SK乌拉乌拉</span><time itemprop="dateCreated datePublished" datetime="2024-12-01T14:29:23.919Z" title="发表于 2024-12-01 22:29:23">2024-12-01</time><time itemprop="dateCreated datePublished" datetime="2024-12-03T01:44:00.854Z" title="更新于 2024-12-03 09:44:00">2024-12-03</time></header><meta name="referrer" content="no-referrer" />
+
+<h1 id="迁移学习"><a href="#迁移学习" class="headerlink" title="迁移学习"></a>迁移学习</h1><h3 id="前置知识："><a href="#前置知识：" class="headerlink" title="前置知识："></a>前置知识：</h3><h4 id="1-边缘概率分布和条件概率分布"><a href="#1-边缘概率分布和条件概率分布" class="headerlink" title="1.边缘概率分布和条件概率分布"></a>1.边缘概率分布和条件概率分布</h4><p>​    在迁移学习中，边缘概率分布和条件概率分布是两个重要的概念。<strong>边缘概率分布</strong>（Marginal Probability Distribution），即P(X)，在迁移学习中是指的是数据的特征分布。P(x)不同是说数据的产生机制不一样，比如不同角度、光照或背景的图像，不同被试者产生的生理数据、行为数据，它们都服从不同的特征分布，即边缘概率分布不一致。在迁移学习中，只要源域和目标域数据服从不同的分布规律，我们就认为二者存在边缘概率分布差异，这种差异被称为分布偏移或领域漂移（domain shift）。<strong>条件概率分布</strong>（Conditional Probability Distribution），即P(y|x)，在迁移学习中是指给定特征的条件下，标签的分布。在理想情况下，源域和目标域的条件概率分布是相同的。然而，在现实中并不总是成立。比如，不同被试者的生理数据通常不一样；而且即使是相同被试者，在不同状态或者时间下，进行相同的动作，生理数据也存在差异。另外，在迁移学习中，理解边缘概率分布和条件概率分布的差异是非常重要的，因为这可以帮助我们选择合适的迁移学习策略。例如，如果源域和目标域在边缘概率分布上有较大差异，但在条件概率分布上差异较小，那么我们可能会选择使用特征选择或者特征转换的方法来进行迁移学习。反之，如果源域和目标域在条件概率分布上有较大差异，那么我们可能需要使用更复杂的迁移学习方法，例如重新标注一些目标域的数据，或者使用对抗性训练等方法来解决这个问题。</p>
+<p>​    我们通常解决的是边缘概率分布以及条件概率分布的不同情况即$P_s(X)\neq P_t(X)$且$P_s(Y|X)\neq P_t(Y|X)$。源域和目标域的数据分布存在差异即$P_s(X,Y)\neq P_t(X,Y)$，通过贝叶斯公式，可以将这个联合概率分解为：$P(X,Y)= P(Y|X)P(X)$ 因此可以将源域和目标域数据分布不同转化为边缘概率分布和条件概率分布。</p>
+<h4 id="2-MMD"><a href="#2-MMD" class="headerlink" title="2.MMD"></a>2.MMD</h4><p>​    既然存在着分布上的差异，那么在迁移学习中便要尽可能减少分布之间的差异。其中所必须思考的问题是如何度量这种差异，只有度量出差异后，才能尽可能减少分布上的差异。</p>
+<p>首先，我们考虑如何描述一个随机变量，最直接的方法就是给出它的概率分布函数 f(x) 。一些简单的分布可以这么干，比如正态分布给出均值和方差就可以确定，但是对于一些<strong>复杂的、高维的随机变量</strong>，我们无法给出它们的分布函数。这时候我们可以用随机变量的矩来描述一个随机变量，比如一阶中心矩是均值，二阶中心矩是方差等等。如果两个分布的均值和方差都相同的话，它们应该很相似，比如同样均值和方差的高斯分布和拉普拉斯分布。但是很明显，均值和方差并不能完全代表一个分布，这时候我们就需<strong>要更高阶的矩</strong>来描述一个分布<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/163839117#ref_1">[1]</a>。举个例子，就好比描述人一样，如果两个人身高、轮廓都一样，我们会说这两个人很像。但是如果要说这两个人是一个人的话，我们如要更多的信息，比如血型、DNA等更加复杂的信息。</p>
 <p>而MMD的基本思想就是，如果两个随机变量的任意阶都相同的话，那么两个分布就是一致的。而当两个分布不相同的话，那么使得<strong>两个分布之间差距最大的那个矩</strong>应该被用来作为度量两个分布的标准。</p>
-$$
+<script type="math/tex; mode=display">
 \begin{equation*}
     \begin{split}
         &\left\|\frac{1}{n_{s}} \sum_{i=1}^{n_{s}} \mathbf{A}^{\mathrm{T}} \mathbf{x}_{i}-\frac{1}{n_{t}} \sum_{j=n_{s}+1}^{n_{s}+n_{t}} \mathbf{A}^{\mathrm{T}} \mathbf{x}_{j}\right\|^{2}\\
@@ -240,10 +242,7 @@ $$
 \end{bmatrix} \mathbf{A} \right)\\
 &=\operatorname{tr} \left( \mathbf{A}^{\mathrm{T}} \mathbf{X} \mathbf{M} \mathbf{X}^{\mathrm{T}}  \mathbf{A} \right)
     \end{split}
-\end{equation*}
-$$
-
-<h4 id="3-Global-distance-and-Local-distance"><a href="#3-Global-distance-and-Local-distance" class="headerlink" title="3.Global distance and Local distance:"></a>3.Global distance and Local distance:</h4><h4 id="4-判别信息"><a href="#4-判别信息" class="headerlink" title="4.判别信息"></a>4.判别信息</h4><h4 id="5交叉熵损失"><a href="#5交叉熵损失" class="headerlink" title="5交叉熵损失."></a>5交叉熵损失.</h4><p>​	假设我们有一个三类分类问题（例如，猫、狗和兔子），我们的模型需要对一张图片进行分类。我们设定真实的标签（one-hot 编码）和模型的预测概率如下：</p>
+\end{equation*}</script><h4 id="3-Global-distance-and-Local-distance"><a href="#3-Global-distance-and-Local-distance" class="headerlink" title="3.Global distance and Local distance:"></a>3.Global distance and Local distance:</h4><h4 id="4-判别信息"><a href="#4-判别信息" class="headerlink" title="4.判别信息"></a>4.判别信息</h4><h4 id="5交叉熵损失"><a href="#5交叉熵损失" class="headerlink" title="5交叉熵损失."></a>5交叉熵损失.</h4><p>​    假设我们有一个三类分类问题（例如，猫、狗和兔子），我们的模型需要对一张图片进行分类。我们设定真实的标签（one-hot 编码）和模型的预测概率如下：</p>
 <ul>
 <li>真实标签 $y$:  猫: 1     狗: 0     兔子: 0<ul>
 <li>这可以表示为 [1,0,0]</li>
@@ -254,24 +253,16 @@ $$
 </ul>
 </li>
 </ul>
-<p>现在我们可以使用交叉熵损失公式来计算损失：$L_{\text{task}} &#x3D; -\sum_{i&#x3D;0}^{2} y^i \log(\hat{y}^i)$</p>
-<p>带入具体的值：$L_{\text{task}} &#x3D; -[1 \cdot \log(0.7) + 0 \cdot \log(0.2) + 0 \cdot \log(0.1)]≈0.3567$</p>
+<p>现在我们可以使用交叉熵损失公式来计算损失：$L_{\text{task}} = -\sum_{i=0}^{2} y^i \log(\hat{y}^i)$</p>
+<p>带入具体的值：$L_{\text{task}} = -[1 \cdot \log(0.7) + 0 \cdot \log(0.2) + 0 \cdot \log(0.1)]≈0.3567$</p>
 <p>这个值表示模型的预测与真实标签之间的差异。一般来说，损失值越小，说明模型的预测越准确。</p>
 <h3 id="想法："><a href="#想法：" class="headerlink" title="想法："></a>想法：</h3><p>1.特征解耦+迁移子空间for共享特征+BLS(增量)for差异特征</p>
 <p>2.现有方法中，目标域样本均假设由部分源域样本线性组合，但是目标域样本应由<strong>同类的源域样本</strong>组合而成（<strong>伪标签）</strong></p>
 <p>3.宽度学习加迁移学习调研</p>
-<ol start="4">
-<li>$$
-\min_{W,P,T} \operatorname{Tr}(W^T X^T M X W) + \gamma \|W-PT\|_F^2 + \lambda \| X_sP  - Y_S \|_F^2\\
-$$</li>
-</ol>
-$$
-\min_{W,P,T} \operatorname{Tr}(W^T X^T M X W) + \gamma \|W-TP\|_F^2 + \lambda \| X_sP  - Y_S \|_F^2\\
-$$
-
-
-
-<h3 id="论文理解："><a href="#论文理解：" class="headerlink" title="论文理解："></a>论文理解：</h3><h5 id="1-Discriminative-Transfer-Subspace-Learning-via-Low-Rank-and-Sparse-Representation-2017"><a href="#1-Discriminative-Transfer-Subspace-Learning-via-Low-Rank-and-Sparse-Representation-2017" class="headerlink" title="1.Discriminative Transfer Subspace Learning via  Low-Rank and Sparse Representation(2017)"></a>1.Discriminative Transfer Subspace Learning via  Low-Rank and Sparse Representation(2017)</h5><ul>
+<p>4.</p>
+<script type="math/tex; mode=display">
+\min_{W,P,T} \operatorname{Tr}(W^T X^T M X W) + \gamma \|W-PT\|_F^2 + \lambda \| X_sP  - Y_S \|_F^2\\</script><script type="math/tex; mode=display">
+\min_{W,P,T} \operatorname{Tr}(W^T X^T M X W) + \gamma \|W-TP\|_F^2 + \lambda \| X_sP  - Y_S \|_F^2\\</script><h3 id="论文理解："><a href="#论文理解：" class="headerlink" title="论文理解："></a>论文理解：</h3><h5 id="1-Discriminative-Transfer-Subspace-Learning-via-Low-Rank-and-Sparse-Representation-2017"><a href="#1-Discriminative-Transfer-Subspace-Learning-via-Low-Rank-and-Sparse-Representation-2017" class="headerlink" title="1.Discriminative Transfer Subspace Learning via  Low-Rank and Sparse Representation(2017)"></a>1.Discriminative Transfer Subspace Learning via  Low-Rank and Sparse Representation(2017)</h5><ul>
 <li><p><strong>提出背景：</strong>在迁移学习中，训练数据和测试数据分别来自两类域：源域和目标域。这两个领域的数据通常共享相同的任务，但遵循<strong>不同的分布</strong>。在大多数情况下，只有一个目标域，而可能存在单个或多个源域。</p>
 </li>
 <li><p><strong>提出背景：</strong>先前工作可以分为两类，其一是修改数据的表示，存在以下问题：1）由于分布不同，很难捕获数据的内在结构，例如数据的<strong>全局和局部结构</strong>；2）对包含<strong>噪声</strong>数据的数据进行同等对待，影响模型的鲁棒性；3）大多数此类方法只关注如何改变数据的表示，而忽略了将分类器设计和改变数据表示的方法<strong>集成</strong>为一项任务可以更好地解决问题。其二是修改已经训练好的模型参数，在这种方法中，数据是固定的，但<strong>决策边界</strong>允许改变</p>
@@ -281,14 +272,12 @@ $$
 </li>
 </ul>
 <p>目标函数：</p>
-$$
+<script type="math/tex; mode=display">
 \begin{align}
     &\min_{P, Z, E, M} \quad \frac{1}{2} \phi(P, Y, X_s) + \|Z\|_* + \alpha \|Z\|_1 + \beta \|E\|_1 \\
     &\text{s.t.} \quad P^\top X_t = P^\top X_s Z + E, \\
     &\quad \quad \phi = \|P^\top X_s - (Y + B \odot M)\|_F^2, \quad M \geq 0
-\end{align}
-$$
-<p>其中第一项使用了标签拖拽，增强判别能力，$\boldsymbol P$表示变换矩阵，用于将源域样本和目标域的样本变换到子空间内；与此同时它还负责将源域样本变换到柔性标签空间内<code>（和松弛图那里感觉类似，然后限制了变换矩阵的灵活性，但是又不仅相同，这里是为了在子空间内源域样本尽可能可分，增强判别性）</code>。此外$\boldsymbol{Z}$表示重建矩阵，也就是说经过变换后，目标域的样本可以由源域样本通过线性组合得到，也就是表示在子空间内源域样本和目标域样本会很好地交错在一起，这也是我们所提迁移学习模型的目的。此外重构矩阵具有低秩的结构，因为目标域内样本在变换后由源域内同类样本线性组合而成。</p>
+\end{align}</script><p>其中第一项使用了标签拖拽，增强判别能力，$\boldsymbol P$表示变换矩阵，用于将源域样本和目标域的样本变换到子空间内；与此同时它还负责将源域样本变换到柔性标签空间内<code>（和松弛图那里感觉类似，然后限制了变换矩阵的灵活性，但是又不仅相同，这里是为了在子空间内源域样本尽可能可分，增强判别性）</code>。此外$\boldsymbol{Z}$表示重建矩阵，也就是说经过变换后，目标域的样本可以由源域样本通过线性组合得到，也就是表示在子空间内源域样本和目标域样本会很好地交错在一起，这也是我们所提迁移学习模型的目的。此外重构矩阵具有低秩的结构，因为目标域内样本在变换后由源域内同类样本线性组合而成。</p>
 <ul>
 <li><p><strong>实验验证：</strong></p>
 <p>数据集：COIL 20 , MSRC, VOC 2007 , CMU PIE , Office, Caltech-256 and Extended Yale B</p>
@@ -309,42 +298,24 @@ $$
 <p>$X^s、X^t$分别记作源域目标域的样本数据；$h_c、h_p$分别记作共享特征以及私有特征;</p>
 <p>共享权重编码器 $Ec$(x) 用于捕捉给定输入样本中各领域共享的表示成分。私有编码器$Ep$(x)（每个域一个）学习捕捉特定域的表示成分。共享解码器通过使用私有表征和源表征来重建输入样本。利用<strong>软子空间正交性约束</strong> $L_{dierence}$ 将私有和共享表示成分分开，而利用相似性损失 $L_{similarity}$ 保持共享表示成分的相似性。</p>
 <p>损失函数Loss构建：</p>
-$$
-L=L_{task}+\alpha{L}_{recon~}+\beta{L}_{difference}+\gamma{L}_{similarity}
-$$
-<p>$\mathrm{L_{task}}$表示分类预测误差，$L_{dierence}$表示域之间的不同差异分离共享特征和独有特征，$L_{similarity}$ 用于将源域与目标域的共享特征更好地交错。</p>
-$$
-L_{\text{task}} = -\sum_{i=0}^{n} y_i \log y_i
-$$
-<p>使用交叉熵损失函数去衡量预测值与实际值得差异，主要目的是衡量预测概率分布 与真实分布之间的差异。交叉熵损失越小，表示模型的预测越接近真实的标签分布。交叉熵损失多用于多分类多标签任务，目前，我们的工作主要集中于多分类单标签中，类似于咱们使用的“$Y-AW$”。</p>
-$$
-\mathcal{L}_{\text{recon}} = \sum_{i=1}^{N_s} \mathcal{L}_{\text{si\_mse}}(\mathbf{x}_i^s, \hat{\mathbf{x}}_i^s) + \sum_{i=1}^{N_t} \mathcal{L}_{\text{si\_mse}}(\mathbf{x}_i^t, \hat{\mathbf{x}}_i^t)
-$$
-
-$$
-\mathcal{L}_{\text{si\_mse}}(\mathbf{x}, \hat{\mathbf{x}}) = \frac{1}{k} \|\mathbf{x} - \hat{\mathbf{x}}\|_2^2 - \frac{1}{k^2} \left( [\mathbf{x} - \hat{\mathbf{x}}] \cdot \mathbf{1}_k \right)^2,
-$$
-
-<p>使用比例不变均方误差去分析源数据与重建数据的差异。在重建任务（如图像重建或信号重建）中，传统的均方误差（MSE）通常被用来衡量模型生成的输出与目标之间的差异。然而，MSE 可能会有一个问题：它会对预测值的绝对大小非常敏感。因此，如果模型输出的预测结果在比例上正确（即，形状和结构与目标相似，但颜色或强度有所偏移），MSE 仍会产生较大的损失。这会导致模型在优化时，不仅关注形状和结构的准确性，还会尝试拟合输入的绝对尺度或强度。<strong>比例不变均方误差（Scale-Invariant MSE, SIMSE）</strong> 则不同。它专注于预测值与目标值之间的相对差异，忽略了绝对的强度差异。SIMSE 通过去除预测值和目标值之间的整体偏移来衡量误差，确保模型更关注结构和形状的还原，而不是绝对的颜色或强度。因此，SIMSE 在像素对之间的相对差异上更敏感，而不会因整体的亮度或比例不同而产生额外惩罚。</p>
-$$
+<script type="math/tex; mode=display">
+L=L_{task}+\alpha{L}_{recon~}+\beta{L}_{difference}+\gamma{L}_{similarity}</script><p>$\mathrm{L_{task}}$表示分类预测误差，$L_{dierence}$表示域之间的不同差异分离共享特征和独有特征，$L_{similarity}$ 用于将源域与目标域的共享特征更好地交错。</p>
+<script type="math/tex; mode=display">
+L_{\text{task}} = -\sum_{i=0}^{n} y_i \log y_i</script><p>使用交叉熵损失函数去衡量预测值与实际值得差异，主要目的是衡量预测概率分布 与真实分布之间的差异。交叉熵损失越小，表示模型的预测越接近真实的标签分布。交叉熵损失多用于多分类多标签任务，目前，我们的工作主要集中于多分类单标签中，类似于咱们使用的“$Y-AW$”。</p>
+<script type="math/tex; mode=display">
+\mathcal{L}_{\text{recon}} = \sum_{i=1}^{N_s} \mathcal{L}_{\text{si\_mse}}(\mathbf{x}_i^s, \hat{\mathbf{x}}_i^s) + \sum_{i=1}^{N_t} \mathcal{L}_{\text{si\_mse}}(\mathbf{x}_i^t, \hat{\mathbf{x}}_i^t)</script><script type="math/tex; mode=display">
+\mathcal{L}_{\text{si\_mse}}(\mathbf{x}, \hat{\mathbf{x}}) = \frac{1}{k} \|\mathbf{x} - \hat{\mathbf{x}}\|_2^2 - \frac{1}{k^2} \left( [\mathbf{x} - \hat{\mathbf{x}}] \cdot \mathbf{1}_k \right)^2,</script><p>使用比例不变均方误差去分析源数据与重建数据的差异。在重建任务（如图像重建或信号重建）中，传统的均方误差（MSE）通常被用来衡量模型生成的输出与目标之间的差异。然而，MSE 可能会有一个问题：它会对预测值的绝对大小非常敏感。因此，如果模型输出的预测结果在比例上正确（即，形状和结构与目标相似，但颜色或强度有所偏移），MSE 仍会产生较大的损失。这会导致模型在优化时，不仅关注形状和结构的准确性，还会尝试拟合输入的绝对尺度或强度。<strong>比例不变均方误差（Scale-Invariant MSE, SIMSE）</strong> 则不同。它专注于预测值与目标值之间的相对差异，忽略了绝对的强度差异。SIMSE 通过去除预测值和目标值之间的整体偏移来衡量误差，确保模型更关注结构和形状的还原，而不是绝对的颜色或强度。因此，SIMSE 在像素对之间的相对差异上更敏感，而不会因整体的亮度或比例不同而产生额外惩罚。</p>
+<script type="math/tex; mode=display">
 \begin{equation}
 \mathcal{L}_{\text{difference}} = \left\| H_{c}^{s\top} H_{p}^{s} \right\|_{F}^{2} + \left\| H_{c}^{t\top} H_{p}^{t} \right\|_{F}^{2},
-\end{equation}
-$$
-<p>$L_{difference}$用于鼓励<strong>共享编码器和专用编码器</strong>对输入的不同方面进行编码，从而分离数据的<strong>共享特征以及私有特征</strong>。使用正交约束，使得共享特征与私有特征的内积尽可能小，增大两者的独立性。</p>
-$$
+\end{equation}</script><p>$L_{difference}$用于鼓励<strong>共享编码器和专用编码器</strong>对输入的不同方面进行编码，从而分离数据的<strong>共享特征以及私有特征</strong>。使用正交约束，使得共享特征与私有特征的内积尽可能小，增大两者的独立性。</p>
+<script type="math/tex; mode=display">
 \begin{equation}
     \mathcal{L}_{\text{similarity }}^{\text{MMD}}= \frac{1}{(N^{s})^{2}}\sum_{i,j=0}^{N^{s}}\kappa(\mathbf{h}_{ci}^{s},\mathbf{h}_{cj}^{s})-\frac{2}{N^{s}N^{t}}\sum_{i,j=0}^{N^{s},N^{t}}\kappa(\mathbf{h}_{ci}^{s},\mathbf{h}_{cj}^{t})+\frac{1}{(N^{t})^{2}}\sum_{i,j=0}^{N^{t}}\kappa(\mathbf{h}_{ci}^{t},\mathbf{h}_{cj}^{t})
-\end{equation}
-$$
-
-$$
+\end{equation}</script><script type="math/tex; mode=display">
 \begin{equation}
     \mathcal{L}_{\text{similarity}}^{\text{DANN}}=\sum_{i=0}^{N_s+N_t}\left\{d_i\log\hat{d_i} + (1-d_i)\log(1-\hat{d_i})\right\}.
-\end{equation}
-$$
-
-<p>使用MMD衡量源域和目标域之间共同特征的差异；使用反向的交叉熵损失函数，随着迭代的增加Loss增加，具体来说，训练一个专门的分类器，主要用于区分样本来自于源域还是目标域，不过训练的目的并不是正确分类，而是让分类器无法区分样本来自哪个域。</p>
+\end{equation}</script><p>使用MMD衡量源域和目标域之间共同特征的差异；使用反向的交叉熵损失函数，随着迭代的增加Loss增加，具体来说，训练一个专门的分类器，主要用于区分样本来自于源域还是目标域，不过训练的目的并不是正确分类，而是让分类器无法区分样本来自哪个域。</p>
 </li>
 </ul>
 <h5 id="2-Domain-Invariant-and-Class-Discriminative-Feature-Learning-for-Visual-Domain-Adaptation-2018"><a href="#2-Domain-Invariant-and-Class-Discriminative-Feature-Learning-for-Visual-Domain-Adaptation-2018" class="headerlink" title="2.Domain Invariant and Class Discriminative Feature Learning for Visual Domain Adaptation(2018)"></a>2.Domain Invariant and Class Discriminative Feature Learning for Visual Domain Adaptation(2018)</h5><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gitee.com/sk4772/photo/raw/master/photo/20241203091614077.png" alt="image-20241126161927877"></p>
@@ -355,23 +326,19 @@ $$
 </li>
 <li><p><strong>方法创新：</strong></p>
 <p>1.MMD减小域之间的边缘分布：</p>
-$$
+<script type="math/tex; mode=display">
 \begin{aligned}
 \mathcal{L}_{MMD}^{(0)}& =\left\|\frac{1}{n_{s}}\sum_{i=1}^{n_{s}}z_{Si}-\frac{1}{n_{t}}\sum_{j=1}^{n_{t}}z_{Tj}\right\|^{2} \\
 &=\left\|\frac{1}{n_{s}}\sum_{i=1}^{n_{s}}\mathbf{P}^{\top}\boldsymbol{x}_{Si}-\frac{1}{n_{t}}\sum_{j=1}^{n_{t}}\mathbf{P}^{\top}\boldsymbol{x}_{Tj}\right\|^{2} \\
 &=\mathbf{Tr}\left(\mathbf{P}^\top\mathbf{X}\mathbf{W}_0\mathbf{X}^\top\mathbf{P}\right),
-\end{aligned}
-$$
-<p>2.减少域之间的条件分布，因为目标域数据不存在标签数据，导致难以对齐条件分布，因此文章使用伪标签进行对齐，通过迭代优化伪标签：</p>
-$$
-
-$$
-<p>3.分布建模</p>
-<p>4.类内相似性建模</p>
-<p>5.类间差异性建模</p>
-<p>6.类内相似性和差异性统一</p>
+\end{aligned}</script><p>2.减少域之间的条件分布，因为目标域数据不存在标签数据，导致难以对齐条件分布，因此文章使用伪标签进行对齐，通过迭代优化伪标签：</p>
+<script type="math/tex; mode=display">
+</script><p>3.分布建模</p>
 </li>
 </ul>
+<p>  4.类内相似性建模</p>
+<p>  5.类间差异性建模</p>
+<p>  6.类内相似性和差异性统一</p>
 <h5 id="3-Robust-Transferable-Subspace-Learning-for-Cross-Corpus-Facial-Expression-Recognition-2020"><a href="#3-Robust-Transferable-Subspace-Learning-for-Cross-Corpus-Facial-Expression-Recognition-2020" class="headerlink" title="3.Robust Transferable Subspace Learning for Cross-Corpus Facial  Expression Recognition(2020)"></a>3.Robust Transferable Subspace Learning for Cross-Corpus Facial  Expression Recognition(2020)</h5><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gitee.com/sk4772/photo/raw/master/photo/20241203091621174.png" alt="image-20241126161959952"></p>
 <ul>
 <li><p><strong>提出背景：</strong>表情识别在严格条件获取的表情图像下可以很好的效果，但现实中表情图像往往来自于不同的设备或者环境，因此会存在不同域的数据，从而导致模型性能严重下降</p>
@@ -382,17 +349,13 @@ $$
 <p>1.引入全局度量算法, 有效地减少<strong>特征分布差异</strong>并获得<strong>鲁棒</strong>不变特征表示</p>
 <p>使用marginal MMD和conditional MMD，</p>
 <p>2.考虑数据的<strong>判别</strong>知识以及数据本地的流形结构，提出了新的<strong>local discriminative distance metric</strong></p>
-<p>​	首先在原先MMD的基础(<strong>全局结构</strong>)上添加条件MMD去考虑数据的<strong>局部结构</strong>即：</p>
-$$
-\min_{P} \operatorname{Tr}\left(P^T X (M_0 + M_C) X^T P\right) + \gamma \|P\|_F^2
-$$
-<p>其中$M_0$表述传统的MMD,$M_C$表示条件MMD，由下式表示：</p>
-$$
-\operatorname{Tr}(P^T X M_C X^T P) = \sum_{c=1}^{C} \left\| \frac{1}{N_S^c} \sum_{x_i \in \mathcal{D}_S^{(c)}} P^T x_i - \frac{1}{N_T^c} \sum_{x_j \in \mathcal{D}_T^{(c)}} P^T x_j \right\|^2
-$$
-<p>这个式子就是将同类样本取均值做MMD，其中关键之处是使用<strong>伪标签</strong>作为目标域的标签，因为原本的目标域是无标签的。</p>
-<p>​	其次，使用<strong>标签拖拽</strong>增加判别能力，并构造源域内部图以及两域之间图即，他们的权重定义如下：</p>
-$$
+<p>​    首先在原先MMD的基础(<strong>全局结构</strong>)上添加条件MMD去考虑数据的<strong>局部结构</strong>即：</p>
+<script type="math/tex; mode=display">
+\min_{P} \operatorname{Tr}\left(P^T X (M_0 + M_C) X^T P\right) + \gamma \|P\|_F^2</script><p>其中$M_0$表述传统的MMD,$M_C$表示条件MMD，由下式表示：</p>
+<script type="math/tex; mode=display">
+\operatorname{Tr}(P^T X M_C X^T P) = \sum_{c=1}^{C} \left\| \frac{1}{N_S^c} \sum_{x_i \in \mathcal{D}_S^{(c)}} P^T x_i - \frac{1}{N_T^c} \sum_{x_j \in \mathcal{D}_T^{(c)}} P^T x_j \right\|^2</script><p>这个式子就是将同类样本取均值做MMD，其中关键之处是使用<strong>伪标签</strong>作为目标域的标签，因为原本的目标域是无标签的。</p>
+<p>​    其次，使用<strong>标签拖拽</strong>增加判别能力，并构造源域内部图以及两域之间图即，他们的权重定义如下：</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
 {(W^S_w)}_{ij} = 
 \begin{cases} 
@@ -406,10 +369,8 @@ $$
 1, & \text{if } i \neq j, \hat{y}_{T_i} = \hat{y}_{T_j} \\
 0, & \text{otherwise}
 \end{cases}
-\end{aligned}
-$$
-<p>这里源域使用真实标签，目标域使用伪标签进行图的构造</p>
-$$
+\end{aligned}</script><p>这里源域使用真实标签，目标域使用伪标签进行图的构造</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
 (W^{ST}_w)_{ij} = 
 \begin{cases} 
@@ -422,10 +383,8 @@ $$
 1, & \text{if } x_i \in N^c_k(x_j) \text{ or } x_j \in N^c_k(x_i) \\
 0, & \text{otherwise}
 \end{cases}
-\end{aligned}
-$$
-<p>这里通过判断最近邻设置图，构造最终的两个权重矩阵$W_w$和$W_b$</p>
-$$
+\end{aligned}</script><p>这里通过判断最近邻设置图，构造最终的两个权重矩阵$W_w$和$W_b$</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
 W_w &= \begin{bmatrix}
 W^S & W^{ST} \\
@@ -436,59 +395,57 @@ W_b &= \begin{bmatrix}
 W^S & 0 \\
 0 & W^T
 \end{bmatrix}
-\end{aligned}
-$$
-<p>通过此构造拉普拉斯矩阵$L_w &#x3D; D_w - W_w, \quad L_b &#x3D; D_b - W_b$，并以此构造流形正则项：</p>
-$$
-\min_{P} \operatorname{Tr}(P^T X (L_w - \lambda L_b) X^T P) = \min_{P} \operatorname{Tr}(P^T X L X^T P)
-$$
-<p>其实这两项就是<strong>域内图以及域间图</strong>的合并项。</p>
+\end{aligned}</script><p>通过此构造拉普拉斯矩阵$L_w = D_w - W_w, \quad L_b = D_b - W_b$，并以此构造流形正则项：</p>
+<script type="math/tex; mode=display">
+\min_{P} \operatorname{Tr}(P^T X (L_w - \lambda L_b) X^T P) = \min_{P} \operatorname{Tr}(P^T X L X^T P)</script><p>其实这两项就是<strong>域内图以及域间图</strong>的合并项。</p>
 <p>最终目标函数为</p>
-$$
+<script type="math/tex; mode=display">
 \min_{P,V} \operatorname{Tr}(P^T X (\alpha M + \beta L) X^T P) + \gamma \|P\|_F^2 + \frac{1}{2} \|P^T X_S - (Y_S + B \odot V)\|_F^2\\
 
-\text{s.t. } P^T P = I, V \geq 0
-$$
-</li>
+\text{s.t. } P^T P = I, V \geq 0</script></li>
 <li></li>
 </ul>
-<h5 id="4-Balanced-Discriminative-Transfer-Feature-Learning-for-Visual-Domain-Adaptation（2021）"><a href="#4-Balanced-Discriminative-Transfer-Feature-Learning-for-Visual-Domain-Adaptation（2021）" class="headerlink" title="4.Balanced Discriminative Transfer Feature Learning for Visual Domain Adaptation（2021）"></a>4.Balanced Discriminative Transfer Feature Learning for Visual Domain Adaptation（2021）</h5><p>​	动机：迁移学习中使用特征匹配可以有效缓解域迁移过程中存在的问题但同等对待<strong>边缘分布和条件分布</strong>，忽视了两者之间的关系，除此之外域内的判别信息也被忽视。</p>
+<h5 id="4-Balanced-Discriminative-Transfer-Feature-Learning-for-Visual-Domain-Adaptation（2021）"><a href="#4-Balanced-Discriminative-Transfer-Feature-Learning-for-Visual-Domain-Adaptation（2021）" class="headerlink" title="4.Balanced Discriminative Transfer Feature Learning for Visual Domain Adaptation（2021）"></a>4.Balanced Discriminative Transfer Feature Learning for Visual Domain Adaptation（2021）</h5><p>​    动机：迁移学习中使用特征匹配可以有效缓解域迁移过程中存在的问题但同等对待<strong>边缘分布和条件分布</strong>，忽视了两者之间的关系，除此之外域内的判别信息也被忽视。</p>
 <p>方法：</p>
 <ol>
 <li>平衡边缘分布以及条件分布：通过MMD分别最小化边缘分布以及条件分布，至于两者之间的权重分配，当源域目标域之间的差距大时，更加注重边缘分布；而当两者很相似时，更加注重条件分布</li>
 <li>判别信息：通过最小化类内相似性以及最大化类间差异性获得，注意目标域使用伪标签（pseudo label）</li>
-<li>目标函数:</li>
+<li>目标函数:              </li>
 </ol>
 <h5 id="5-Discriminative-Fisher-Embedding-Dictionary-Transfer-Learning-for-Object-Recognition（2023）"><a href="#5-Discriminative-Fisher-Embedding-Dictionary-Transfer-Learning-for-Object-Recognition（2023）" class="headerlink" title="5.Discriminative Fisher Embedding Dictionary  Transfer Learning for Object Recognition（2023）"></a>5.Discriminative Fisher Embedding Dictionary  Transfer Learning for Object Recognition（2023）</h5><p>问题：目标域数据缺乏可用的标签</p>
 <p>解决思想：将源域以及目标域数据投影到统一的子空间内；在此空间内，目标域数据可由源域数据组合表示，他们在此空间内可以很好地交错。两者分布大致相同，因此通过训练源域数据得到的模型可以很好地分类目标域数据.</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">以往方法缺陷</th>
+<th style="text-align:left">以往方法缺陷</th>
 <th>补足</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">1.难以捕获数据内在结构</td>
+<tbody>
+<tr>
+<td style="text-align:left">1.难以捕获数据内在结构</td>
 <td></td>
 </tr>
 <tr>
-<td align="left">2.没有考虑噪声</td>
+<td style="text-align:left">2.没有考虑噪声</td>
 <td></td>
 </tr>
 <tr>
-<td align="left">3.忽略了将更改数据表示和分类器设计统一</td>
-<td></td>
+<td style="text-align:left">3.忽略了将更改数据表示和分类器设计统一</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
-<li><input disabled="" type="checkbox"> 2.Dynamic Double Classifiers Approximation  for Cross-Domain Recognition（2022）</li>
+<li>[ ] 2.Dynamic Double Classifiers Approximation  for Cross-Domain Recognition（2022）</li>
 </ul>
 <h3 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h3><h5 id="1-Caltech256-and-Office"><a href="#1-Caltech256-and-Office" class="headerlink" title="1.Caltech256 and Office"></a>1.Caltech256 and Office</h5><p>Caltech256 是一个标准的对象识别数据集. 分  别从 Office 和 Caltech256 数据集中提取 1 410 幅 和 1 123 幅图像, 在 Office 中, A 子集含有 958 幅图  像, W 子集含有 295 幅图像, D 子集含有 157 幅图  像, 每幅图像被提取 SURF 特征并量化成 800 维的  向量, 因此两种不同的数据可以具有相同的特征空 间.</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th>任务&#x2F;方法</th>
+<th>任务/方法</th>
 <th>BLS</th>
 <th>DABLS</th>
 <th>BLS+MMD</th>
@@ -498,7 +455,8 @@ $$
 <th>CDELM</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>A→C</td>
 <td>20.82</td>
 <td>44.29</td>
@@ -628,16 +586,20 @@ $$
 <td>45.38</td>
 <td>41.50</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th>任务&#x2F;方法</th>
+<th>任务/方法</th>
 <th>DABLS</th>
 <th>BLS+MMD(复现)</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>COIL20_1-&gt;COIL_2</td>
 <td>88.12</td>
 <td><strong>89.86</strong></td>
@@ -647,16 +609,20 @@ $$
 <td>84.72</td>
 <td><strong>88.89</strong></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th>任务&#x2F;方法</th>
+<th>任务/方法</th>
 <th>DABLS</th>
 <th>BLS+MMD(复现)</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>ImageNet-&gt;VOC2007</td>
 <td>67.83</td>
 <td><strong>69.05</strong></td>
@@ -666,16 +632,20 @@ $$
 <td>77.87</td>
 <td><strong>79.68</strong></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th>任务&#x2F;方法</th>
+<th>任务/方法</th>
 <th>DABLS</th>
 <th>BLS+MMD(复现)</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>MNIST-&gt;USPS</td>
 <td>68.54</td>
 <td>59.33</td>
@@ -685,7 +655,9 @@ $$
 <td>50.13</td>
 <td>46.75</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 </article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/sk.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/sk.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">SK乌拉乌拉</div><div class="post-copyright__author_desc"></div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/2024/12/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E7%BB%BC%E8%BF%B0/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/2024/12/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E7%BB%BC%E8%BF%B0/')">迁移学习综述</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/2024/12/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E7%BB%BC%E8%BF%B0/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=undefined&amp;url=http://example.com/2024/12/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E7%BB%BC%E8%BF%B0/&amp;pic=undefined" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
   var currentPageUrl = window.location.href;
   var input = document.createElement("input");
