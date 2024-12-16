@@ -3,8 +3,7 @@
   <entry>
     <title>2010-Domain Adaptation via Transfer Component Analysis（TCA）</title>
     <url>/2024/12/06/2010-Domain-Adaptation-via-Transfer-Component-Analysis%EF%BC%88TCA%EF%BC%89/</url>
-    <content><![CDATA[<h2 id="论文阅读">论文阅读</h2>
-<h3
+    <content><![CDATA[<h3
 id="domain-adaptation-via-transfer-component-analysistca">2010-Domain
 Adaptation via Transfer Component Analysis（TCA）</h3>
 <h6 id="论文背景">论文背景:</h6>
@@ -75,58 +74,6 @@ W=(I+\mu KLK)^{-1}KHKWZ.
       <tags>
         <tag>域自适应</tag>
         <tag>MMD</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科研常用网站及软件—Csk</title>
-    <url>/2024/09/01/%E7%A7%91%E7%A0%94%E5%B8%B8%E7%94%A8%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E2%80%94Csk/</url>
-    <content><![CDATA[<h1 id="常用网站及软件csk">常用网站及软件—Csk</h1>
-<p>latex安装；Winedt: Latex代码编辑器</p>
-<p>JabRef: 参考文献管理</p>
-<p>MATLAB: 代码（实验，绘图）</p>
-<p>绘图：PPT，MATLAB，Python</p>
-<p>文献阅读管理：Zotero, 知云等</p>
-<p>文献网站：谷歌学术，百度学术，<a
-href="https://www.scidown.cn/">Scidown</a>(文献下载)，<a
-href="aminer.cn">AMiner</a>，<a
-href="sci-hub.se">Sci-hub</a>（文献下载），<a
-href="http://spis.hnlat.com/">SPIS</a>，<a
-href="https://www.ablesci.com/">科研通</a></p>
-<p>代码查找：Github, <a
-href="https://paperswithcode.com">Paperwithcode</a></p>
-<p>大模型：ChatGPT，kimi</p>
-]]></content>
-      <categories>
-        <category>论文写作</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科研常用网站及软件—Csk</title>
-    <url>/2024/09/01/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83%E2%80%94Csk/</url>
-    <content><![CDATA[<h1 id="常用网站及软件csk">常用网站及软件—Csk</h1>
-<p>latex安装；Winedt: Latex代码编辑器</p>
-<p>JabRef: 参考文献管理</p>
-<p>MATLAB: 代码（实验，绘图）</p>
-<p>绘图：PPT，MATLAB，Python</p>
-<p>文献阅读管理：Zotero, 知云等</p>
-<p>文献网站：谷歌学术，百度学术，<a
-href="https://www.scidown.cn/">Scidown</a>(文献下载)，<a
-href="aminer.cn">AMiner</a>，<a
-href="sci-hub.se">Sci-hub</a>（文献下载），<a
-href="http://spis.hnlat.com/">SPIS</a>，<a
-href="https://www.ablesci.com/">科研通</a></p>
-<p>代码查找：Github, <a
-href="https://paperswithcode.com">Paperwithcode</a></p>
-<p>大模型：ChatGPT，kimi</p>
-]]></content>
-      <categories>
-        <category>论文写作</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
@@ -762,6 +709,54 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
         <tag>域自适应</tag>
         <tag>MMD</tag>
         <tag>迁移学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研常用网站及软件—Csk</title>
+    <url>/2024/09/01/%E7%A7%91%E7%A0%94%E5%B8%B8%E7%94%A8%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E2%80%94Csk/</url>
+    <content><![CDATA[<h1 id="常用网站及软件csk">常用网站及软件—Csk</h1>
+<p>latex安装；Winedt: Latex代码编辑器</p>
+<p>JabRef: 参考文献管理</p>
+<p>MATLAB: 代码（实验，绘图）</p>
+<p>绘图：PPT，MATLAB，Python</p>
+<p>文献阅读管理：Zotero, 知云等</p>
+<p>文献网站：谷歌学术，百度学术，<a
+href="https://www.scidown.cn/">Scidown</a>(文献下载)，<a
+href="aminer.cn">AMiner</a>，<a
+href="sci-hub.se">Sci-hub</a>（文献下载），<a
+href="http://spis.hnlat.com/">SPIS</a>，<a
+href="https://www.ablesci.com/">科研通</a></p>
+<p>代码查找：Github, <a
+href="https://paperswithcode.com">Paperwithcode</a></p>
+<p>大模型：ChatGPT，kimi</p>
+]]></content>
+      <categories>
+        <category>论文写作</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文写作注意事项—Csk</title>
+    <url>/2024/09/01/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E2%80%94Csk/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="890429309692362ac37fc249b7811b7f20212dd136f11f28d45d8dcd18c8b52c">802cd80b63fccd52ebcbbd93e4cfc45fc6fa5042d706317aa187d9196af62f5b9d448a348f3ed78c32224c27ed1c63b3533fd59f7055269f2ecf4385bf170906412f3f2a4210853562ea35d5f6506ec8508f683b8b0a54a7c4246fdd268f2c0457319c073f93d63633e0da120053c447a8bdb2a11fe29f696afaf6a1ec155a68708b91752303d903e94458edc5a27983af5ff93bc6ec91782a8e9f51cffbb6bfd476991fb69f887fb73ad2392f53f7961fa5780844965e83bc0503ced45fec5c6925a3dc3bdf06d14f910fa5d3a7b47173c59d6685646442fa37f4b0cf01afeb72bd764207db055f71db271e745966a1ede29fa50dfb67278738dfdcc2930f52bf12d84f220c9b62c6f3752124014f71d3ad9795651ca3410ff1c0983dd3663d03de33e98e441a7a5673f7c0eeceb061ff73a579974cd194985d6db7f1d149e657f29fd501b4631952333da654f4391c69b7c77ba109d6c8dd0770c69f50d170f394824c7c553767454affb8361a5e545af27f40b00d6debe0ff4a4de903ae10fc7d8bdcb15fe56b5f4a8fd809e77323143fdf5268507a0c2940edae3afe387cb6411582c3c61694493a461b9adf418168a37e2a953954376270d7c03c226c62b4e56ac4e9502b0e06d5f445f1a71db00bb1216c1de372fd4f5af2aa8264419731c95bd56c02cbed8e528a6dfa18b7d872b67cd3ee2d02a5c3a08ff11caacad479ca18ec52bf2278969e9ec55c8d6b421047df3a835cd353a70b101dfe09670d1083cba11bf03dea71541ff2868ab329f9c8d1e75a12e406de40c338954e9323131ecada3cbcdb08f7d45f0cef499cef0961767508f5b10956c0984d71ca1465b00483546034f651a189231e4615df450aca5f7c7223dd4263b9d4abbb6a54e07c605c68d90ca6c850a358ce54975ecf103e5398dcc7f8236dc76a827c343089ac2c848635179b3f1e0a2bf03fff6b2036854397ae4ad569ad8f6382eea2e0f01216c547b4a3de5b3909df826469f87f6fdd85b819a1410df1a98d29b070cdffaf10a0947aa17c192dad3638d36ff9f00ae17b34d5b23798b3357f7245e146c409e619c73d788265d5c62ba8eb0d9f995c43e0035f0c5cb5ce5fbd72865ab1660191d8bdd518750025fc77450a10327a5e5dbba8ed00e6b0bcaeb9781789fc7ed2644a89d8660a1886f41c0b9f392c28396222757ef4921f1a0fc8ef332cd5d72646da35339147ab7ceb7a5c4477ec18748951a076d564b01972dbde7396393b2bfbd5b05b96f9ffed3182108f52a53489ad0e8b27ba16e55b5389ee3eae202b94916c8c56277849d11a2951fefae9a694e6d477595b10e352ad6b21c931ce4aa2a1c530c4d78a866c428cf99e8ad607a0f5d4c57d47e4dc1c301af840212fa87a6a304ab8088ba09653db5c9c4c5cf1c22e73c4b5ba10479505aff05033f6e5b154e457c4ab885d0f591fd34a853aa3ceaaaf5130e3c7bccab9e52df6747973271ee19f3860b830a40e3bd92edcecfe95790ddd7a9878cb39815033bc8b1be6054ce3354c09b702dec679c5f72f1a7f81b3e20afba2a3d6c18fab2fc124834dd306a8a569704568a15ae12a03b3ccadcbc6234f8daefa363f1cf05f3e47ad94127616ecbfc2428fdeefce05cfeabb8ec590900a113c97e1251613d9f711ad5fad1fd315e8390d6e9eb352bbea61316d257d8a6f03ed7417c47fc0ea409d4eaba50b6454016075a5b073ec8dce3675cb71db656ae45adc6f576f80bb9ce813245f00905f53032627305854a6eaf020797e3a851f0437b364a63471bdb693e34ee3dc81899caff36019114ce291b7a9d85cdc1c4169a16db5ec80994b6f9a6197efe3d8c9cf575bfe26946182649ca0cc8f5aa2da95b36238a6624933bf82369b30b35c1d400328a9a1e33d75f6bc8b52e109e884d1a174d2260281f147a703fa4fb9db9509973d990c2980f4f1efc3739d4e0da97f0d35b17da6adc38ee4b3aecb62aeec6e4a681af2a00dcc6115a13d14b73338087783b503c293704a37ca638bc1fa89dd1e14911d071b8d52223a7b826434d8ad208193620073191d26c45c97c9c029450e2293a9b3d9af89a74bd7c80dde58392b56803179139b13ec8ebba55721939b7851fbb288e652f84c19afdae51e02e936468fabb6d485a076de3e869a711f1c6ef75bf1ac70af9b7cf3b4c460fddd07567bbe32b211544e358f35a222fa169491198faecf6295fd95392e30d5e002e350c9de7f4212f997ac341db1ce1ef644565d4f36056dd54e571e9dc2e808f5f44508e1ca0c991aca7ceabab5051a0f9c62e10fb9d57fc563c98022f832c1bee32252516cb8aef627719abb6f43631bc728c64430d7e932141fcb6150cde007fd87aa543884a2462cf4e85460eadc295431e30caa6deefa6d294b0f6146104458a37fe57e2c2820318cd48eb4118fbfe186376a6d3b99f507e424a6fa3d14b3122629d841027f9682e98822af93b6ff4927d6811b5cf94be2d0b9376b90b06b7a5befaaaf529f2b4240cc5bf265702aeac9199eef4192e0e793c9e3</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>论文写作</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
       </tags>
   </entry>
 </search>
