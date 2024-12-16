@@ -78,17 +78,10 @@ W=(I+\mu KLK)^{-1}KHKWZ.
       </tags>
   </entry>
   <entry>
-    <title>论文写作注意事项—Csk</title>
-    <url>/2017/05/26/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E2%80%94Csk/</url>
-    <content><![CDATA[<h1 id="论文写作注意事项csk">论文写作注意事项—Csk</h1>
-<h4 id="文章撰写所需软件">文章撰写所需软件：</h4>
+    <title>科研常用网站及软件—Csk</title>
+    <url>/2024/09/01/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83%E2%80%94Csk/</url>
+    <content><![CDATA[<h1 id="常用网站及软件csk">常用网站及软件—Csk</h1>
 <p>latex安装；Winedt: Latex代码编辑器</p>
-<figure>
-<img
-src="https://gitee.com/sk4772/photo/raw/master/photo/20241203092330619.png"
-alt="image-20241203092330561" />
-<figcaption aria-hidden="true">image-20241203092330561</figcaption>
-</figure>
 <p>JabRef: 参考文献管理</p>
 <p>MATLAB: 代码（实验，绘图）</p>
 <p>绘图：PPT，MATLAB，Python</p>
@@ -102,38 +95,43 @@ href="https://www.ablesci.com/">科研通</a></p>
 <p>代码查找：Github, <a
 href="https://paperswithcode.com">Paperwithcode</a></p>
 <p>大模型：ChatGPT，kimi</p>
-<h4 id="行文规范">行文规范</h4>
-<h5 id="缩写">1.缩写</h5>
-<p>文章中需要多次出现时，第一次使用全称，后文使用缩写；</p>
-<p>摘要中尽量避免出现缩写，影响读者阅读；</p>
-<p>摘要中的缩写与文章中的缩写相互独立，举例：BLS在摘要中出现过，正文中第一次使用时仍需使用全称，随后在再使用缩写；</p>
-<h5 id="标点符号">2.标点符号</h5>
-<p>标点前不空格，标点后空格</p>
-<p><strong>易犯错：当一句话未结束时使用逗号（特指公式）</strong></p>
-<p>当公式中出现新的变量，符号时进行需解释说明</p>
-<p><strong>文章前后的标量字符要统一</strong>，如X，Y的维度要与相对应变量的维度统一</p>
-<h5 id="段落">3.段落</h5>
-<p>尽量避免多次分段且每段篇幅短，影响观感</p>
-<h5 id="句子">4.句子</h5>
-<p>避免出现错别字，单复数形式，时态错误等语法错误，<strong>可以使用GPT,word（检查错别字）等</strong></p>
-<p>句子中的数字不能单纯打出来，以latex代码形式出现</p>
-<h5 id="参考文献">5.参考文献</h5>
-<p>参考文献中近三年的文章引用至少三分之一左右；</p>
-<p>引用一些所投期刊的文章</p>
-<h5 id="文献降重">6.文献降重</h5>
-<p>GPT降重指令及已有<a
-href="https://chatgpt.com/share/671a42e5-0cc8-8005-af71-c77efd5e7900">对话链接</a>：我将给你两段文字，你给出他们之间的重复部分，并对段1文本中的句子结构进行改写调整，通过采用不同的句型和语法结构，避免出现连续四个字与段2相同的情况，以增强文本的多样性和学术性。</p>
 ]]></content>
       <categories>
         <category>论文写作</category>
       </categories>
       <tags>
-        <tag>入门</tag>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研常用网站及软件—Csk</title>
+    <url>/2024/09/01/%E7%A7%91%E7%A0%94%E5%B8%B8%E7%94%A8%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E2%80%94Csk/</url>
+    <content><![CDATA[<h1 id="常用网站及软件csk">常用网站及软件—Csk</h1>
+<p>latex安装；Winedt: Latex代码编辑器</p>
+<p>JabRef: 参考文献管理</p>
+<p>MATLAB: 代码（实验，绘图）</p>
+<p>绘图：PPT，MATLAB，Python</p>
+<p>文献阅读管理：Zotero, 知云等</p>
+<p>文献网站：谷歌学术，百度学术，<a
+href="https://www.scidown.cn/">Scidown</a>(文献下载)，<a
+href="aminer.cn">AMiner</a>，<a
+href="sci-hub.se">Sci-hub</a>（文献下载），<a
+href="http://spis.hnlat.com/">SPIS</a>，<a
+href="https://www.ablesci.com/">科研通</a></p>
+<p>代码查找：Github, <a
+href="https://paperswithcode.com">Paperwithcode</a></p>
+<p>大模型：ChatGPT，kimi</p>
+]]></content>
+      <categories>
+        <category>论文写作</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
     <title>迁移学习综述</title>
-    <url>/2024/12/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E7%BB%BC%E8%BF%B0/</url>
+    <url>/2024/09/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E7%BB%BC%E8%BF%B0/</url>
     <content><![CDATA[<h1 id="迁移学习">迁移学习</h1>
 <h3 id="前置知识">前置知识：</h3>
 <h4 id="边缘概率分布和条件概率分布">1.边缘概率分布和条件概率分布</h4>
@@ -571,22 +569,11 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 特征并量化成 800 维的 向量, 因此两种不同的数据可以具有相同的特征空
 间.</p>
 <table>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 17%" />
-<col style="width: 13%" />
-<col style="width: 11%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-</colgroup>
 <thead>
 <tr>
 <th>任务/方法</th>
 <th>BLS</th>
 <th>DABLS</th>
-<th>BLS+MMD</th>
 <th>CD-CDBN</th>
 <th>SS-BLS</th>
 <th>TCA</th>
@@ -598,7 +585,6 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <td>A→C</td>
 <td>20.82</td>
 <td>44.29</td>
-<td><strong>44.97</strong></td>
 <td>35.56</td>
 <td>42.16</td>
 <td>40.78</td>
@@ -608,7 +594,6 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <td>A→D</td>
 <td>17.83</td>
 <td>42.06</td>
-<td><strong>43.95</strong></td>
 <td>33.79</td>
 <td>39.40</td>
 <td>31.85</td>
@@ -618,7 +603,6 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <td>A→W</td>
 <td>19.61</td>
 <td>42.09</td>
-<td>37.63</td>
 <td>27.46</td>
 <td>40.61</td>
 <td>37.63</td>
@@ -628,7 +612,6 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <td>C→A</td>
 <td>29.16</td>
 <td>51.68</td>
-<td><strong>52.92</strong></td>
 <td>38.78</td>
 <td>49.67</td>
 <td>44.89</td>
@@ -638,7 +621,6 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <td>C→D</td>
 <td>24.84</td>
 <td>45.85</td>
-<td><strong>49.04</strong></td>
 <td>36.94</td>
 <td>44.20</td>
 <td>45.84</td>
@@ -648,7 +630,6 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <td>C→W</td>
 <td>20.46</td>
 <td>47.79</td>
-<td>44.07</td>
 <td>35.54</td>
 <td>45.74</td>
 <td>36.61</td>
@@ -658,7 +639,6 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <td>D→A</td>
 <td>32.42</td>
 <td>36.73</td>
-<td><strong>36.74</strong></td>
 <td>28.34</td>
 <td>35.57</td>
 <td>31.52</td>
@@ -668,7 +648,6 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <td>D→C</td>
 <td>30.03</td>
 <td>32.47</td>
-<td>32.24</td>
 <td>26.79</td>
 <td>30.19</td>
 <td>32.50</td>
@@ -678,7 +657,6 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <td>D→W</td>
 <td>79.98</td>
 <td>80.06</td>
-<td>78.31</td>
 <td>50.78</td>
 <td>79.11</td>
 <td>87.12</td>
@@ -688,7 +666,6 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <td>W→A</td>
 <td>34.61</td>
 <td>40.01</td>
-<td>37.06</td>
 <td>30.89</td>
 <td>37.51</td>
 <td>30.69</td>
@@ -698,7 +675,6 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <td>W→C</td>
 <td>31.73</td>
 <td>36.50</td>
-<td>31.52</td>
 <td>27.26</td>
 <td>35.29</td>
 <td>27.16</td>
@@ -708,7 +684,6 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <td>W→D</td>
 <td>80.81</td>
 <td>82.73</td>
-<td><strong>84.08</strong></td>
 <td>50.42</td>
 <td>80.89</td>
 <td>90.45</td>
@@ -718,7 +693,6 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <td>平均值</td>
 <td>35.19</td>
 <td>48.52</td>
-<td>47.71</td>
 <td>35.21</td>
 <td>46.69</td>
 <td>45.38</td>
@@ -731,19 +705,16 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <tr>
 <th>任务/方法</th>
 <th>DABLS</th>
-<th>BLS+MMD(复现)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>COIL20_1-&gt;COIL_2</td>
 <td>88.12</td>
-<td><strong>89.86</strong></td>
 </tr>
 <tr>
 <td>COIL20_2-&gt;COIL_1</td>
 <td>84.72</td>
-<td><strong>88.89</strong></td>
 </tr>
 </tbody>
 </table>
@@ -752,19 +723,16 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <tr>
 <th>任务/方法</th>
 <th>DABLS</th>
-<th>BLS+MMD(复现)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ImageNet-&gt;VOC2007</td>
 <td>67.83</td>
-<td><strong>69.05</strong></td>
 </tr>
 <tr>
 <td>VOC2007-&gt;ImageNet</td>
 <td>77.87</td>
-<td><strong>79.68</strong></td>
 </tr>
 </tbody>
 </table>
@@ -773,29 +741,27 @@ Approximation for Cross-Domain Recognition（2022）</label></li>
 <tr>
 <th>任务/方法</th>
 <th>DABLS</th>
-<th>BLS+MMD(复现)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>MNIST-&gt;USPS</td>
 <td>68.54</td>
-<td>59.33</td>
 </tr>
 <tr>
 <td>USPS-&gt;MNIST</td>
 <td>50.13</td>
-<td>46.75</td>
 </tr>
 </tbody>
 </table>
 ]]></content>
       <categories>
-        <category>Transfer Learning</category>
+        <category>论文阅读</category>
       </categories>
       <tags>
-        <tag>调研</tag>
-        <tag>写作</tag>
+        <tag>域自适应</tag>
+        <tag>MMD</tag>
+        <tag>迁移学习</tag>
       </tags>
   </entry>
 </search>
