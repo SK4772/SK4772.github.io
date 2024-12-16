@@ -1,6 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2010-Domain Adaptation via Transfer Component Analysis（TCA）</title>
+    <url>/2024/12/06/2010-Domain-Adaptation-via-Transfer-Component-Analysis%EF%BC%88TCA%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="论文阅读">论文阅读</h2>
+<h3
+id="domain-adaptation-via-transfer-component-analysistca">2010-Domain
+Adaptation via Transfer Component Analysis（TCA）</h3>
+<h6 id="论文背景">论文背景:</h6>
+<p>​ Domain adaptation(域自适应)
+通过训练与目标与<strong>相关但不相同</strong>的源域数据来实现目标域上的任务。</p>
+<h6 id="动机">动机：</h6>
+<p>​ MMD（Maximum mean discrepancy ）旨在学习一个映射函数<span
+class="math inline">\(\phi\)</span>去减少域之间的分布差异: <span
+class="math display">\[
+\mathrm{Dist}(\mathrm{X,Y})=\left\|\frac1{n_1}\sum_{i=1}^{n_1}\phi(x_i)-\frac1{n_2}\sum_{i=1}^{n_2}\phi(y_i)\right\|_{\mathcal{H}}.
+\]</span> 通过将两个样本映射到再现核希尔伯特空间RKHS（Reproducing Kernel
+Hilbert
+Space），并取映射后样本均值的距离衡量两个样本分布的差异。<strong>然而，
+<span class="math inline">\(\phi\)</span>通常是高度非线性的，直接优化
+可能会陷入较差的局部最小值（不理解）</strong>。因此MMDE(Maximum Mean
+Discrepancy Embedding)被提出使用核学习衡量分布差异： <span
+class="math display">\[
+\mathrm{Dist}(X_S^{\prime},X_T^{\prime})=\mathrm{tr}(KL)
+\]</span> 其中，<span
+class="math inline">\(K=\begin{bmatrix}K_{S,S}&amp;K_{S,T}\\K_{T,S}&amp;K_{T,T}\end{bmatrix}\)</span>表示学习到的核矩阵<span
+class="math inline">\(K\)</span>，用于衡量域内样本的相似度，以及域间样本的相似度。并且<span
+class="math inline">\(L=[L_{ij}]\succeq0\mathrm{~with~}L_{ij}=\frac1{n_1^2}\text{
+if }x_i,x_j\in X_S;\:L_{ij}=\frac1{n_2^2}\mathrm{if~}x_i,x_j\in
+X_T\text{; otherwise, }-\frac1{n_1n_2}.\)</span>
+优化此问题需要解决半正定优化问题SDP，这<strong>代价是昂贵</strong>的；并且为了找到相同的低维表示，获得的
+K 必须进一步通过 PCA 进行后处理。这可能会<strong>丢弃 K
+中的有用信息</strong>；并且此种学习是转导式，<strong>缺乏泛化能力</strong>
+b) <strong>计算开销大</strong></p>
+<h6 id="方法内容">方法内容：</h6>
+<p>​ 假设前提: <span class="math inline">\(P \neq
+Q\)</span>，但是通过映射函数<span
+class="math inline">\(\phi\)</span>可以达到<span
+class="math inline">\(P(Y_S|\phi(X_S))=P(Y_T|\phi(X_T))\)</span>。TCA
+使用<strong>最大平均差异</strong> (MMD)
+来学习<strong>再生内核希尔伯特空间</strong> (RKHS)
+中的一些跨域传输分量（<strong>transfer
+component</strong>），也是寻找一个子空间中使不同域中的数据分布彼此接近。首先它使用了矩阵分解用于核矩阵<span
+class="math inline">\(K=(KK^{-1/2})(K^{-1/2}K)\)</span>然.后引入一个<span
+class="math inline">\((n_1+n_2)\times m\)</span>大小的矩阵W,其中<span
+class="math inline">\(m\ll n_1+n_2\)</span>： <span
+class="math display">\[
+\widetilde{K}=(KK^{-1/2}\widetilde{W})(\widetilde{W}^\top
+K^{-1/2}K)=KWW^\top K,
+\]</span> 其中<span
+class="math inline">\(W=K^{-1/2}\widetilde{W}\in\mathbb{R}^{(n_1+n_2)\times
+m}\)</span> ,两个样本之间的分布差异由下式给出： <span
+class="math display">\[
+\widetilde{k}(x_i,x_j)=k_{x_i}^\top WW^\top k_{x_j},
+\]</span> 其中<span
+class="math inline">\(\begin{array}{rcl}k_x&amp;=&amp;[k(x_1,x),\ldots,k(x_{n_1+n_2},x)]^\top\end{array}\)</span>，这样的话不仅衡量了源域和目标域之之间的差异，还衡量了源域与源域的其余样本差异，有助于提出泛化能力。用新的K替代原先的K,得到
+<span class="math display">\[
+\begin{aligned}\mathrm{Dist}(X_S^{\prime},X_T^{\prime})&amp;=\mathrm{tr}((KWW^\top
+K)L)\\&amp;=\mathrm{tr}(W^\top KLKW).\end{aligned}
+\]</span> 最终目标函数为： <span class="math display">\[
+\begin{aligned}\min_W&amp;\operatorname{tr}(W^\top
+W)+\mu\operatorname{tr}(W^\top KLKW)\\\text{s.t.}&amp;W^\top
+KHKW=I,\end{aligned}
+\]</span>
+其中第一项用于控制W的复杂度，可以避免广义特征分解中分母的秩不足，而约束项则是防止平凡解。</p>
+<h6 id="优化">优化</h6>
+<p><span class="math display">\[
+W=(I+\mu KLK)^{-1}KHKWZ.
+\]</span></p>
+]]></content>
+      <categories>
+        <category>论文阅读</category>
+      </categories>
+      <tags>
+        <tag>域自适应</tag>
+        <tag>MMD</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>论文写作注意事项—Csk</title>
     <url>/2017/05/26/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E2%80%94Csk/</url>
     <content><![CDATA[<h1 id="论文写作注意事项csk">论文写作注意事项—Csk</h1>
